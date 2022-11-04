@@ -1,0 +1,116 @@
+.field label {
+  line-height: 22px;
+}
+
+.field input {
+  cursor: pointer;
+}
+.field input[type="text"],
+.field input[type="number"],
+.field input[type="search"],
+.field select {
+  display: block;
+  width: 100%;
+  padding: 12px 12px 12px 16px;
+  border-radius: var(--br-lg);
+  border: 1px solid var(--cl-black-400);
+}
+
+.field input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--cl-orange-500);
+  cursor: pointer;
+}
+
+.field input:focus,
+.field select:focus {
+  border-color: var(--cl-cta);
+}
+
+.field select[value] {
+  border-color: var(--cl-primary);
+}
+
+.field select option:checked {
+  color: var(--cl-primary);
+}
+
+.field input:not(:placeholder-shown) {
+  border-color: var(--cl-primary);
+}
+
+/* ERROR */
+.field.__error input,
+.field.__error select {
+  color: var(--cl-error);
+  border-color: var(--cl-error);
+}
+
+.field.__error input:focus,
+.field.__error select:focus {
+  border-color: var(--cl-error-active);
+}
+
+.field.__error input:not(:placeholder-shown) {
+  border-color: var(--cl-error-hover);
+}
+
+.field input[type="text"]:read-only,
+.field input:disabled,
+.field select:disabled {
+  background-color: var(--cl-gray-300);
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.field input:disabled {
+  color: var(--cl-black);
+  border-color: var(--cl-black-600);
+}
+
+.field input:disabled:focus {
+  border-color: var(--cl-black-400);
+}
+
+.field input:disabled:not(:placeholder-shown) {
+  border-color: var(--cl-black-400);
+}
+
+/* RADIO */
+.field input[type="radio"] {
+  margin-right: 8px;
+}
+.field input[type="radio"]:before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  top: -1px;
+  left: -1px;
+  position: relative;
+  background-color: white;
+  display: inline-block;
+  visibility: visible;
+  border: 1px solid var(--cl-black-400);
+  box-sizing: border-box;
+}
+.field input[type="radio"]:checked:before {
+  background-color: var(--cl-primary);
+  border: 1px solid var(--cl-primary);
+}
+.field input[type="radio"]:checked:after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  top: -23.5px;
+  left: 3px;
+  position: relative;
+  background-color: white;
+  display: inline-block;
+  visibility: visible;
+  box-sizing: border-box;
+}

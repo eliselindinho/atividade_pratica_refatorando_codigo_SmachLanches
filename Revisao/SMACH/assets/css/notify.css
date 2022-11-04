@@ -1,0 +1,27 @@
+.notify {
+  width: 100%;
+  max-width: 357px;
+  padding: 12px;
+  color: var(--cl-text);
+  background-color: var(--cl-black);
+  border-radius: var(--br-lg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+  color: white;
+}
+
+.notify .icon-close {
+  background-image: url(../img/svg/icon-close-white.svg);
+}
+
+.notify-success {
+  background-color: var(--cl-success);
+}
+.notify-error {
+  background-color: var(--cl-error);
+}
+.notify-warning {
+  background-color: var(--cl-warning);
+}

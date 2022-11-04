@@ -1,0 +1,207 @@
+/* DEFAULT STYLE */
+.btn {
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  padding: 8px;
+
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+
+  background: var(--cl-default);
+  border-radius: var(--br-lg);
+  color: white;
+  font-weight: normal;
+  transition: all 0.2s ease-in-out;
+}
+
+a.btn {
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.btn .icon-plus {
+  background-image: url(../img/svg/icon-plus-white.svg);
+}
+
+/* BUTTONS COMUNS */
+
+.btn-default:hover {
+  background: var(--cl-default-hover);
+}
+
+.btn-default:active {
+  background: var(--cl-default-active);
+}
+
+.btn-primary {
+  background: var(--cl-primary);
+}
+
+.btn-primary:hover {
+  background: var(--cl-primary-hover);
+}
+
+.btn-primary:active {
+  background: var(--cl-primary-active);
+}
+
+.btn-primary-outline {
+  background: transparent;
+  border: 1px solid var(--cl-primary);
+  color: var(--cl-primary);
+}
+
+.btn-primary-outline:hover {
+  background: var(--cl-primary-hover);
+  color: white;
+}
+
+.btn-primary-outline .icon-search {
+  background-image: url("../img/svg/icon-search-orange.svg");
+}
+.btn-primary-outline .icon-trash {
+  background-image: url("../img/svg/icon-trash-orange.svg");
+}
+.btn-primary-outline .icon-print {
+  background-image: url("../img/svg/icon-print-orange.svg");
+}
+.btn-primary-outline .icon-plus {
+  background-image: url("../img/svg/icon-plus-orange.svg");
+}
+.btn-primary-outline .icon-edit {
+  background-image: url("../img/svg/icon-edit-orange.svg");
+}
+
+.btn-primary-outline:hover .icon-search {
+  background-image: url("../img/svg/icon-search-white.svg");
+}
+.btn-primary-outline:hover .icon-trash {
+  background-image: url("../img/svg/icon-trash-white.svg");
+}
+.btn-primary-outline:hover .icon-print {
+  background-image: url("../img/svg/icon-print-white.svg");
+}
+.btn-primary-outline:hover .icon-plus {
+  background-image: url("../img/svg/icon-plus-white.svg");
+}
+.btn-primary-outline:hover .icon-edit {
+  background-image: url("../img/svg/icon-edit-white.svg");
+}
+
+.btn-primary-outline:active {
+  background: var(--cl-primary-active);
+  color: white;
+}
+
+.btn-cta {
+  background: var(--cl-cta);
+}
+
+.btn-cta:hover {
+  background: var(--cl-cta-hover);
+}
+
+.btn-cta:active {
+  background: var(--cl-cta-active);
+}
+
+.btn-cta-link {
+  color: var(--cl-cta);
+}
+
+.btn-cta-link:hover {
+  color: var(--cl-cta-hover);
+}
+
+.btn-cta-link:active {
+  color: var(--cl-cta-active);
+}
+
+/* BUTTONS STATUS */
+.btn-success {
+  background: var(--cl-success);
+}
+
+.btn-success:hover {
+  background: var(--cl-success-hover);
+}
+
+.btn-success:active {
+  background: var(--cl-success-active);
+}
+
+.btn-warning {
+  background: var(--cl-warning);
+}
+
+.btn-warning:hover {
+  background: var(--cl-warning-hover);
+}
+
+.btn-warning:active {
+  background: var(--cl-warning-active);
+}
+
+.btn-error {
+  background: var(--cl-error);
+}
+
+.btn-error:hover {
+  background: var(--cl-error-hover);
+}
+
+.btn-error:active {
+  background: var(--cl-error-active);
+}
+
+/* STATUS */
+.btn-default.__received {
+  background: var(--cl-black-300);
+  color: var(--cl-black-600);
+  border: 1px solid var(--cl-black-600);
+}
+.btn-default.__received:hover {
+  background: var(--cl-black-200);
+}
+.btn-default.__received:active {
+  background: var(--cl-black-400);
+}
+
+.btn-warning.__done {
+  background: var(--cl-yellow-300);
+  color: var(--cl-yellow-600);
+  border: 1px solid var(--cl-yellow-600);
+}
+.btn-warning.__done:hover {
+  background: var(--cl-yellow-200);
+}
+.btn-warning.__done:active {
+  background: var(--cl-yellow-400);
+}
+
+.btn-success.__delivered {
+  background: var(--cl-green-300);
+  color: var(--cl-green-600);
+  border: 1px solid var(--cl-green-600);
+}
+.btn-success.__delivered:hover {
+  background: var(--cl-green-200);
+}
+.btn-success.__delivered:active {
+  background: var(--cl-green-400);
+}
+
+/* TABLET */
+@media only screen and (max-width: 768px) {
+  .btn-group .btn {
+    display: block;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 4px;
+  }
+}

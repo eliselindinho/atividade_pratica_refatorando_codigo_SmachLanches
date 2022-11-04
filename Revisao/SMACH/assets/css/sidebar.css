@@ -1,0 +1,29 @@
+.sidebar {
+  display: flex;
+  /* align-items: center; */
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 47px 0px 28px rgba(0, 0, 0, 0.01),
+    21px 0px 21px rgba(0, 0, 0, 0.02), 5px 0px 11px rgba(0, 0, 0, 0.02),
+    0px 0px 0px rgba(0, 0, 0, 0.02);
+  background-color: white;
+  padding: 65px 32px;
+}
+.sider-information-date {
+  font-style: normal;
+}
+
+.logo {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 170px;
+}
+.logo img {
+  width: 100%;
+  display: block;
+}
+
+.sidebar-information span {
+  display: block;
+  line-height: 22px;
+}

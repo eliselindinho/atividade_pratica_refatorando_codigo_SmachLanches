@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <style>
+      .separator {
+        padding: 20px 0;
+        border-bottom: 1px gray dashed;
+      }
+      .separator > .field {
+        margin-bottom: 20px;
+      }
+    </style>
+    <title>Components style guide</title>
+  </head>
+  <body>
+    <div class="separator">
+      <i class="icon icon-close"></i>
+      <i class="icon icon-edit"></i>
+      <i class="icon icon-filter"></i>
+      <i class="icon icon-plus"></i>
+      <i class="icon icon-print"></i>
+      <i class="icon icon-search"></i>
+      <i class="icon icon-trash"></i>
+    </div>
+    <div class="separator">
+      <button class="btn btn-default">button default</button>
+      <button class="btn btn-primary">button primary</button>
+      <button class="btn btn-cta">
+        <i class="icon icon-plus"></i>button cta
+        <i class="icon icon-plus"></i>
+      </button>
+      <button class="btn btn-success">button success</button>
+      <button class="btn btn-warning">button warning</button>
+      <button class="btn btn-error">button error</button>
+    </div>
+    <div class="separator">
+      <button class="btn btn-default __received">receveid</button>
+      <button class="btn btn-warning __done">done</button>
+      <button class="btn btn-success __delivered">entregue</button>
+    </div>
+    <div class="separator">
+      <fieldset class="field">
+        <label for="name">Label</label>
+        <input type="text" name="name" placeholder="Insert name" />
+      </fieldset>
+      <fieldset class="field">
+        <label for="name">Label</label>
+        <input
+          type="text"
+          name="name"
+          placeholder="Insert name"
+          value="Filled"
+        />
+      </fieldset>
+      <fieldset class="field __error">
+        <label for="name">Error</label>
+        <input
+          type="text"
+          name="name"
+          placeholder="Insert name"
+          value="With error"
+        />
+      </fieldset>
+      <fieldset class="field">
+        <label for="name">Disabled</label>
+        <input type="text" name="name" placeholder="Insert name" disabled />
+      </fieldset>
+    </div>
+    <div class="separator">
+      <fieldset class="field">
+        <label for="name">Delivery</label>
+        <input type="radio" name="name" />
+        <label for="name">Salao</label>
+        <input type="radio" name="name" />
+      </fieldset>
+      <fieldset class="field">
+        <label for="name">Delivery</label>
+        <input type="checkbox" name="name" />
+        <label for="name">Salao</label>
+        <input type="checkbox" name="name" />
+      </fieldset>
+    </div>
+    <div class="separator">
+      <fieldset class="field">
+        <label for="name">Default</label>
+        <select>
+          <option>Default</option>
+          <option value="delivery">Delivery</option>
+          <option value="salao">Salão</option>
+        </select>
+      </fieldset>
+      <fieldset class="field">
+        <label for="name">Selected</label>
+        <select value="delivery">
+          <option>Default</option>
+          <option selected value="delivery">Delivery</option>
+          <option value="salao">Salão</option>
+        </select>
+      </fieldset>
+      <fieldset class="field">
+        <label for="name">Disabled</label>
+        <select disabled>
+          <option>Default</option>
+          <option selected value="delivery">Delivery</option>
+          <option value="salao">Salão</option>
+        </select>
+      </fieldset>
+    </div>
+    <div class="separator">
+      <div class="notify notify-success">
+        <span>O pedido foi recebido</span>
+        <i class="icon icon-close"></i>
+      </div>
+      <div class="notify notify-error">
+        <span>Erro de validação</span>
+        <i class="icon icon-close"></i>
+      </div>
+    </div>
+    <div class="separator">
+      <table class="table">
+        <thead>
+          <td>
+            <fieldset class="field">
+              <input type="checkbox" name="name" />
+            </fieldset>
+            Id
+          </td>
+          <td>Name</td>
+          <td>Actions</td>
+          <td>State</td>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <fieldset class="field">
+                <input type="checkbox" name="name" />
+              </fieldset>
+              0001
+            </td>
+            <td>José</td>
+            <td>
+              <i class="icon icon-trash"></i>
+              <i class="icon icon-print"></i>
+            </td>
+            <td>
+              <button class="btn btn-success __delivered">entregue</button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <fieldset class="field">
+                <input type="checkbox" name="name" />
+              </fieldset>
+              0002
+            </td>
+            <td>Maria</td>
+            <td>300400</td>
+            <td>
+              <button class="btn btn-warning __done">pronto</button>
+            </td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+              <button class="btn btn-primary">edit</button>
+              <button class="btn btn-cta">save</button>
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+    <div class="separator">
+      GRID
+      <div class="row">
+        <div class="col col-xs-12 col-md-6 col-3">cl 1</div>
+        <div class="col col-xs-12 col-md-6 col-3">cl 2</div>
+        <div class="col col-xs-12 col-md-6 col-3">cl 3</div>
+        <div class="col col-xs-12 col-md-6 col-3">cl 4</div>
+      </div>
+    </div>
+  </body>
+</html>

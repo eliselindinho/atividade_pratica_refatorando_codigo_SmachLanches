@@ -1,0 +1,148 @@
+/* CONFIG */
+@import url("./reset.css");
+@import url("./variable.css");
+
+/* UTILS */
+@import url("./grid.css");
+
+/* ELEMENTS */
+@import url("./text.css");
+@import url("./icon.css");
+@import url("./button.css");
+@import url("./field.css");
+
+/* COMPONENTS */
+@import url("./notify.css");
+@import url("./table.css");
+@import url("./form.css");
+
+/* CONTAINERS */
+@import url("./page.css");
+@import url("./sidebar.css");
+@import url("./footer.css");
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: var(--fns-default);
+}
+
+body main {
+  min-height: 90vh;
+}
+
+body .table-wrap {
+  display: none;
+}
+body .notify {
+  position: fixed;
+  top: 10px;
+  right: -100%;
+}
+
+body .notify.notify-warning,
+body .notify.notify-error,
+body .notify.notify-success {
+  right: 10px;
+}
+
+.form {
+  display: none;
+}
+
+/* STATE ALL ORDERS */
+body[state="all_orders"] .form-add-order {
+  display: block;
+}
+body[state="all_orders"] .form-actions {
+  display: flex;
+}
+body[state="all_orders"] .form-actions .btn-group .btn {
+  display: none;
+}
+body[state="all_orders"] .form-actions .btn-group .btn-print {
+  display: inline-block;
+}
+body[state="all_orders"] .table-wrap.__all-orders {
+  display: block;
+}
+
+/* NEW ORDER  AND EDIT ORDER */
+body[state="edit_order"] .form-new-order,
+body[state="new_order"] .form-new-order {
+  display: block;
+}
+
+body[state="edit_order"] .table-wrap.__new-order,
+body[state="new_order"] .table-wrap.__new-order {
+  display: block;
+}
+
+/* SELECTED ORDER */
+body[state="selected_orders"] .form-add-order {
+  display: block;
+}
+body[state="selected_orders"] .form-all-orders {
+  display: block;
+}
+body[state="selected_orders"] .form-actions {
+  display: flex;
+}
+body[state="selected_orders"] .form-actions label,
+body[state="selected_orders"] .form-actions .form-actions_fields {
+  display: none;
+}
+body[state="selected_orders"] .form-actions .btn-group {
+  gap: 16px;
+  width: 100%;
+  margin-top: 27px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+body[state="selected_orders"] .form-actions .btn-group .btn {
+  display: block;
+}
+body[state="selected_orders"] .form-actions .btn-group .btn-print {
+  display: none;
+}
+body[state="selected_orders"] .table-wrap.__all-orders {
+  display: block;
+}
+
+/* DESKTOP */
+@media only screen and (min-width: 769px) {
+  body[state="selected_orders"] .form-actions .btn-group {
+    justify-content: flex-start;
+  }
+}
+
+/* TABLET */
+@media only screen and (max-width: 768px) {
+  body .notify {
+    width: 100%;
+    max-width: 100%;
+    position: fixed;
+    top: -500px;
+    right: 0;
+    border-radius: 0;
+    right: 0;
+  }
+  body .notify.notify-warning,
+  body .notify.notify-error,
+  body .notify.notify-success {
+    top: 0;
+    right: 0;
+  }
+}
+
+@media print {
+  .table input,
+  .form,
+  .footer,
+  .sidebar {
+    display: none !important;
+  }
+  section {
+    width: 100% !important;
+  }
+}

@@ -1,0 +1,90 @@
+:root {
+  /* PALLETE COLORS */
+  --cl-orange-100: #fff4eb;
+  --cl-orange-200: #ffbf85;
+  --cl-orange-300: #ffa552;
+  --cl-orange-400: #ff8b20;
+  --cl-orange-500: #eb7100;
+  --cl-orange-600: #b85800;
+
+  --cl-black-100: #b3b3b3;
+  --cl-black-200: #999999;
+  --cl-black-300: #808080;
+  --cl-black-400: #666666;
+  --cl-black-500: #4d4d4d;
+  --cl-black-600: #333333;
+
+  --cl-gray-100: #f3f3f3;
+  --cl-gray-200: #fbfbfb;
+  --cl-gray-300: #ececec;
+  --cl-gray-400: #cecece;
+
+  --cl-blue-100: #e1d6ff;
+  --cl-blue-200: #9670ff;
+  --cl-blue-300: #713dff;
+  --cl-blue-400: #4a08ff;
+  --cl-blue-500: #3900d6;
+  --cl-blue-600: #2c00a3;
+
+  --cl-red-100: #ff8c85;
+  --cl-red-200: #ff5c52;
+  --cl-red-300: #ff2d20;
+  --cl-red-400: #eb0e00;
+  --cl-red-500: #b80b00;
+  --cl-red-600: #850800;
+
+  --cl-green-100: #85ffa0;
+  --cl-green-200: #52ff78;
+  --cl-green-300: #20ff51;
+  --cl-green-400: #00eb34;
+  --cl-green-500: #00b828;
+  --cl-green-600: #00851d;
+
+  --cl-yellow-100: #ffe485;
+  --cl-yellow-200: #ffd952;
+  --cl-yellow-300: #ffce20;
+  --cl-yellow-400: #ebb700;
+  --cl-yellow-500: #b88f00;
+  --cl-yellow-600: #856700;
+
+  /* TEMPLATE COLORS */
+
+  --cl-text: var(--cl-black-400);
+
+  --cl-default: var(--cl-black-100);
+  --cl-default-active: var(--cl-black-500);
+  --cl-default-hover: var(--cl-black-300);
+
+  --cl-primary: var(--cl-orange-400);
+  --cl-primary-active: var(--cl-orange-500);
+  --cl-primary-hover: var(--cl-orange-300);
+
+  --cl-cta: var(--cl-blue-400);
+  --cl-cta-active: var(--cl-blue-500);
+  --cl-cta-hover: var(--cl-blue-300);
+
+  /* TEMPLATE STATUS COLORS */
+  --cl-success: var(--cl-green-400);
+  --cl-success-active: var(--cl-green-500);
+  --cl-success-hover: var(--cl-green-300);
+
+  --cl-warning: var(--cl-yellow-400);
+  --cl-warning-active: var(--cl-yellow-500);
+  --cl-warning-hover: var(--cl-yellow-300);
+
+  --cl-error: var(--cl-red-400);
+  --cl-error-active: var(--cl-red-500);
+  --cl-error-hover: var(--cl-red-300);
+
+  /*  FONT SIZE */
+  --fns-default: 16px;
+  --fns-xs: 14px;
+
+  /* RADIUS */
+  --br-xs: 2px;
+  --br-md: 4px;
+  --br-lg: 8px;
+
+  /* SCALE GRID */
+  --column-unit: 8.33%;
+}

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SMACH - Lanches</title>
+    <meta type="description" content="SMACH Lanches faça seu pedido e ganha um MACH feliz"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;300;400;500;700&family=Inter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <script src="./assets/js/script.js" type="module"></script>
+  </head>
+  <body state="all_orders">
+    <div class="notify">
+      <span></span>
+      <i class="icon icon-close"></i>
+    </div>
+    <main class="row">
+      <aside class="sidebar col col-xs-12 col-md-4 col-3 __md-hidden">
+        <figure class="logo">
+          <img src="./assets/img/logo.png" alt="SMACH Lanches" />
+        </figure>
+        <p class="sidebar-information">
+          <span class="text"><strong>Operador:</strong> Maricula</span>
+          <span class="text"><strong>Data-Hora:</strong> <i class="sider-information-date"></i></span>
+          <span class="text"><strong>Version:</strong> 1.0</span>
+        </p>
+      </aside>
+      <section class="col col-xs-12 col-md-12 col-9">
+        <div class="page page-new-order">
+          <div class="form form-add-order">
+            <h2 class="title form-title">Todos os Pedidos</h2>
+            <button class="btn btn-cta">
+              <icon class="icon icon-plus"></icon>
+              Novo pedido</button>
+          </div>
+          <form class="form form-new-order">
+            <h2 class="title form-title">Novo pedido</h2>
+            <div class="form-new-order__product-type">
+              <label>Tipo de Consumo</label>
+              <fieldset class="field">
+                <label for="orderType"><strong>Delivery</strong></label>
+                <input type="radio" name="orderType" value="delivery" required />
+                <label for="name"><strong>Salão</strong></label>
+                <input type="radio" name="orderType"  value="salao" required />
+              </fieldset>
+            </div>
+            <div class="form-new-order__search">
+              <label>Buscar produto</label>
+              <fieldset class="row field">
+                <input type="search" name="productCode" placeholder="Insert name" />
+                <button class="btn btn-primary-outline">
+                  <i class="icon icon-search"></i>
+                  Buscar
+                </button>
+              </fieldset>
+            </div>
+            <div class="row form-new-order__product-info">
+              <fieldset class="col col-xs-12 col-md-4 col-3 field">
+                <label for="productQuantity">Quantidade</label>
+                <input type="number" name="productQuantity" placeholder="0" min=1/>
+              </fieldset>
+              <fieldset class="col col-xs-12 col-md-4 col-6 field">
+                <label for="productName">Produto</label>
+                <input readonly type="text" name="productName" placeholder="Nome do produto"/>
+              </fieldset>
+              <fieldset class="col col-xs-12 col-md-4 col-3 field">
+                <label for=productPrice"">Preço</label>
+                <input readonly type="text" name="productPrice" placeholder="R$ 00,00" min=1 />
+              </fieldset>
+            </div>
+            <button class="btn btn-primary">
+              <i class="icon icon-plus"></i>Adicionar produto
+            </button>
+          </form>
+          <form class="form form-actions">
+            <div class="row">
+              <label class="col-12" for="name">Filtrar por:</label>
+              <div class="row col col-xs-12 col-md-12 col-4 form-actions_fields">
+                <fieldset class="col col-xs-6 col-md-6 col-5 field">
+                  <select name="orderType">
+                    <option value="all">Tipo</option>
+                    <option value="delivery">Delivery</option>
+                    <option value="salao">Salão</option>
+                  </select>
+                </fieldset>
+                <fieldset class="col col-xs-6 col-md-6 col-5 field">
+                  <select name="orderStatus">
+                    <option value="all">Status</option>
+                    <option value="received">Recebido</option>
+                    <option value="done">Pronto</option>
+                    <option value="delivered">Entregue</option>
+                  </select>
+                </fieldset>
+              </div>
+              <div class="btn-group">
+                <button class="btn btn-primary-outline btn-print"><i class="icon icon-print"></i>Imprimir</button>
+                <button class="btn btn-primary-outline btn-edit"><i class="icon icon-edit"></i>Editar</button>
+                <button class="btn btn-primary-outline btn-delete"><i class="icon icon-trash"></i>Deletar</button>
+              </div>
+            </div>
+          </form>
+          <div class="table-wrap __new-order __empty">
+            <table class="table table-new-order">
+              <thead>
+                <td>Código</td>
+                <td>Produto</td>
+                <td>Quantidade</td>
+                <td>Valor</td>
+                <td>Ação</td>
+              </thead>
+              <tbody>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td colspan="5">
+                    <div class="row">
+                      <p class="table-new-order__total">
+                        TOTAL DO PEDIDO <strong>R$ 0,00</strong>
+                      </p>
+                    <div class="btn-group">
+                      <a class="btn btn-cta-link">Cancelar</a>
+                      <button class="btn btn-cta">Salvar Pedido</button>
+                     </div>
+                  </td>
+                </tr>
+              </tfoot>
+            </table>
+            <p class="text-warning">Não temos nenhum pedido para mostrar</p>
+          </div>
+          <div class="table-wrap __all-orders __empty">
+            <table class="table table-all-orders">
+              <thead>
+                <td>
+                 <fieldset class="field">
+                  <input type="checkbox">
+                 </fieldset>
+                  N° do pedido</td>
+                <td>Itens</td>
+                <td>Tipo</td>
+                <td>Valor</td>
+                <td>Status</td>
+              </thead>
+              <tbody>
+            
+              </tbody>
+            </table>
+            <p class="text-warning">Não temos nenhum pedido para mostrar</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <p class="text">
+        Copyright © 2022 Nome da equipe - Todos os direitos reservados
+      </p>
+    </footer>
+  </body>
+</html>
